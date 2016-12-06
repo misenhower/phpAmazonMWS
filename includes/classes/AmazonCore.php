@@ -852,14 +852,14 @@ abstract class AmazonCore{
      * @return string
      */
     protected function _getParametersAsString(array $parameters) {
-//        $queryParameters = array();
-//        foreach ($parameters as $key => $value) {
-//            $queryParameters[] = $key . '=' . $this->_urlencode($value);
-//        }
-//        return implode('&', $queryParameters);
+        $queryParameters = array();
+        foreach ($parameters as $key => $value) {
+            $queryParameters[] = $key . '=' . $this->_urlencode($value);
+        }
+        return implode('&', $queryParameters);
 
         // We may as well use the input method!
-        return http_build_query($parameters);
+        //return http_build_query($parameters);
     }
     
     /**
